@@ -1,0 +1,13 @@
+{
+  "sitio": "Agustín Pablo Almeyra",
+  "titulo_corto": "Agustín Pablo Almeyra",
+  "responsable": "Agustín Pablo Almeyra, abogado",
+  "domicilio": "",
+  "email": "agustinalmeyra1@gmail.com",
+  "telefono": "+54 9 2345 42-2651",
+  "persona": "yo",
+  "formulario": true,
+  "btn": "btn-dark",
+  "theme_color": "#0B1724",
+  "css": {"fondo": "var(--marfil)", "fondo_hero": "var(--noche)", "texto_hero": "var(--marfil)", "acento": "var(--grisazul)", "muted": "var(--muted)", "titulos": "var(--head)"}
+}
