@@ -87,7 +87,7 @@
     if (waBtn) waBtn.addEventListener("click", function () {
       if (!check(false)) return;
       var val = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; };
-      var txt = "Hola, soy " + val("fNombre") + "." + (val("fArea") ? " Quisiera hacer una consulta sobre " + val("fArea") + "." : "") +
+      var txt = "Hola, soy " + val("fNombre") + "." + (val("fModo") ? " Quisiera agendar una reunión " + val("fModo").toLowerCase() + "." : "") + (val("fArea") ? " Área: " + val("fArea") + "." : "") +
         "\n\n" + val("fMsg") + "\n\nTeléfono: " + val("fTel") + (val("fEmail") ? "\nEmail: " + val("fEmail") : "");
       window.open(waUrl(txt), "_blank", "noopener");
     });

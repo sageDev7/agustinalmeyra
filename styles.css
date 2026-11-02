@@ -530,6 +530,72 @@ h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-.015em;line-hei
   .burger{margin-top:-26px}  /* centro óptico de las dos líneas = centro del textlogo */
 }
 
+/* =========================================================
+   v2 (01/11) — pedido del cliente: nombre en el hero, sobre mí completo,
+   menos info en áreas y criterio, muchos accesos de contacto, reunión virtual/presencial
+   ========================================================= */
+/* hero: el nombre es el H1 (dos líneas de ancho parejo) */
+.hero-h1 .l1{font-size:1em;line-height:.98;color:var(--marfil)}
+.hero-h1 .l2{font-size:1.62em;line-height:.92;color:var(--grisazul)}
+.hero-sub{max-width:36rem;text-wrap:balance}
+
+/* 01 sobre mí: texto completo, la cifra acompaña fija */
+.sobre{align-items:start}
+.sobre-cifra{position:sticky;top:calc(var(--hdr) + 3rem)}
+.sobre-p{margin:1.6rem 0 2.2rem}
+.sobre-p p{font-size:1.04rem;line-height:1.85;color:var(--grafito)}
+.sobre-p p+p{margin-top:1.1rem}
+.sobre-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 2rem}
+
+/* 02 áreas: tres tarjetas que son botón de consulta */
+.areas-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.8rem}
+.area3{display:flex;flex-direction:column;padding:2.4rem 2.2rem 2.2rem;border:1px solid var(--line-d);background:rgba(11,23,36,.35);transition:border-color .5s,background .5s}
+.area3:hover{border-color:rgba(113,134,165,.7);background:rgba(23,43,63,.6)}
+.area3 h3{margin:1.5rem 0 2.2rem;font-size:clamp(1.6rem,2.4vw,2rem);color:var(--marfil)}
+.area3-cta{display:inline-flex;align-items:center;gap:.5rem;margin-top:auto;font-family:var(--head);font-size:.78rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--grisazul)}
+.area3-cta i{transition:transform .3s var(--ease)}
+.area3:hover .area3-cta i{transform:translateX(4px)}
+
+/* 03 criterio */
+.crit2{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.crit2-txt{margin-bottom:2rem;font-size:1.28rem;line-height:1.7;color:var(--grafito)}
+
+/* 04 comunicate: canales grandes */
+.canales{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.8rem}
+.canal{display:flex;flex-direction:column;align-items:flex-start;padding:2.4rem 2.2rem 2.2rem;border:1px solid var(--line-d);background:rgba(11,23,36,.4);transition:border-color .5s,background .5s;min-width:0}
+.canal:hover{border-color:rgba(113,134,165,.75);background:rgba(11,23,36,.6)}
+.canal>i{display:grid;place-items:center;width:3.6rem;height:3.6rem;background:var(--grisazul);color:var(--noche);font-size:1.7rem}
+.canal small{margin-top:1.6rem;font-family:var(--head);font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--grisazul)}
+.canal b{margin-top:.3rem;font-family:var(--head);font-weight:600;font-size:1.25rem;color:var(--marfil);overflow-wrap:anywhere}
+.canal-cta{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.8rem;padding-bottom:.3rem;border-bottom:1px solid var(--grisazul);font-family:var(--head);font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--marfil)}
+.canal-cta i{transition:transform .3s var(--ease)}
+.canal:hover .canal-cta i{transform:translateX(4px)}
+
+/* 05 agendar: modalidades */
+.modos{margin-top:2rem;border-top:1px solid var(--line)}
+.modos li{display:flex;align-items:center;gap:1.1rem;padding:1.2rem 0;border-bottom:1px solid var(--line)}
+.modos .ic{display:grid;place-items:center;flex:none;width:3rem;height:3rem;background:var(--noche);color:var(--grisazul);font-size:1.35rem}
+.modos b{display:block;font-family:var(--head);font-weight:600;font-size:1.15rem;color:var(--noche)}
+.modos span{font-size:.94rem;color:var(--grafito)}
+.modos-wa{margin-top:1.6rem;font-size:.98rem;color:var(--grafito)}
+.modos-wa a{font-weight:700;color:var(--noche);border-bottom:1px solid var(--grisazul)}
+
+.areas-3>*,.canales>*,.crit2>*{min-width:0}
+@media (max-width:1024px){
+  .areas-3,.canales{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+  .crit2{grid-template-columns:1fr;gap:1.6rem}
+  .sobre-cifra{position:static}
+}
+@media (max-width:768px){
+  .hero-h1 .l2{font-size:1.6em}
+  .sobre-p{text-align:left}
+  .sobre-ctas{justify-content:center}
+  .area3,.canal{align-items:center;text-align:center;padding:2rem 1.4rem}
+  .crit2{text-align:center}
+  .modos{text-align:left}
+  .modos-wa{text-align:center}
+}
+
 /* Anti modo oscuro forzado: Samsung Internet y algunas WebView ignoran «only light»,
    pero no invierten la página si detectan un tema oscuro propio. Este «tema oscuro» repite los colores claros. */
 @media (prefers-color-scheme:dark){
