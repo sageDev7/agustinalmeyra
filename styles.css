@@ -305,6 +305,8 @@ h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-.015em;line-hei
 .mnav a:not(.btn){font-family:var(--head);font-size:.86rem;color:var(--marfil)}
 .mnav a:not(.btn):hover{color:var(--grisazul)}
 .mnav-brand{justify-content:center;text-align:center;margin-bottom:1.2rem;padding-bottom:1.4rem;border-bottom:1px solid var(--line-d)}
+.mnav-brand{flex-direction:column;align-items:center;gap:.9rem}
+.mnav-brand .brand-n{white-space:nowrap}
 
 /* ---------- hero: noche + foto a la derecha con la banda translúcida de su identidad ---------- */
 .hero{isolation:isolate;background:var(--noche);color:var(--muted-d);min-height:680px;align-items:stretch}
@@ -498,7 +500,7 @@ h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-.015em;line-hei
   .sobre-cifra>span{margin-inline:auto}
   .sobre-txt{text-align:center}
   .h2{font-size:clamp(2.1rem,9vw,2.6rem)}
-  .areas .h2,.criterio-head,.faq-head{text-align:center}
+  .h2,.areas .h2,.criterio-head,.faq-head{text-align:center}
   .area{text-align:center;align-items:center}
   .area-head{flex-direction:column;gap:.9rem}
   .area-list{width:100%}
