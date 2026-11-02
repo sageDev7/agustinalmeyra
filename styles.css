@@ -476,7 +476,7 @@ h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-.015em;line-hei
   .brand-s{font-size:.74rem}
   /* hero mobile: captura de presentación en 100svh fijo (texto arriba, foto llenando el resto) */
   .hero{height:100svh;min-height:0;flex-direction:column}
-  .hero-in{order:1;flex:none;padding:calc(var(--hdr) + 1.6rem) var(--gut) 1.6rem;text-align:center;justify-content:center}
+  .hero-in{order:1;flex:none;padding:calc(var(--hdr) + 1.6rem) var(--gut) 2.8rem;text-align:center;justify-content:center}
   .hero-txt{max-width:none;display:flex;flex-direction:column;align-items:center}
   .regla{width:52px;height:3px;margin-bottom:1.2rem}
   .hero .eyebrow{margin-bottom:.9rem}
@@ -537,7 +537,8 @@ h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-.015em;line-hei
    menos info en áreas y criterio, muchos accesos de contacto, reunión virtual/presencial
    ========================================================= */
 /* hero: el nombre es el H1 (dos líneas de ancho parejo) */
-.hero-h1 .l1{font-size:1em;line-height:.98;color:var(--marfil)}
+/* v3 (02/11): sin «Pablo» ni bajada: «Agustín» / «Almeyra» al mismo tamaño */
+.hero-h1 .l1{font-size:1.38em;line-height:.92;color:var(--marfil)}
 .hero-h1 .l2{font-size:1.62em;line-height:.92;color:var(--grisazul)}
 .hero-sub{max-width:36rem;text-wrap:balance}
 
@@ -589,6 +590,7 @@ h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-.015em;line-hei
   .sobre-cifra{position:static}
 }
 @media (max-width:768px){
+  .hero-h1 .l1{font-size:1.36em}
   .hero-h1 .l2{font-size:1.6em}
   .sobre-p{text-align:left}
   .sobre-ctas{justify-content:center}
